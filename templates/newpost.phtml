@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guest-book</title>
+  <link rel="stylesheet" href="/../css/reset.css">
+  <link rel="stylesheet" href="/../css/style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a class="logo_link" href="/">
+          <div class="logo">Guest-book</div>
+        </a>
+        <nav class="menu">
+          <ul class="menu_list">
+            <li class="menu_list-item"><a href="/" class="menu_list-link">все записи</a></li>
+            <li class="menu_list-item action"><a href="/newpost" class="menu_list-link ">добавить запись</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+  </header>
+
+  <section class="newmessage">
+    <div class="container">
+
+      <div class="newmessage__inner">
+
+        <form class="form" action="/newpost" method="POST">
+          <input class="login" type="text" name="post[username]" placeholder="Логин" required>
+          <textarea class="textarea" name="post[message]" placeholder="Введите сообщение..." required></textarea>
+          <input class="btn" type="submit" value="Send">
+        </form>
+
+      </div>
+
+    </div>
+  </section>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guest-book</title>
+  <link rel="stylesheet" href="/../css/reset.css">
+  <link rel="stylesheet" href="/../css/style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a class="logo_link" href="/">
+          <div class="logo">Guest-book</div>
+        </a>
+        <nav class="menu">
+          <ul class="menu_list">
+            <li class="menu_list-item action"><a href="/" class="menu_list-link">все записи</a></li>
+            <li class="menu_list-item"><a href="/newpost" class="menu_list-link">добавить запись</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+  </header>
+
+  <section class="main">
+    <div class="container ">
+      <div class="main__inner">
+        <?php if (!empty($posts)) : ?>
+          <?php foreach ($posts as $post) : ?>
+            <div class="main__note">
+              <div class="main__note-header">
+                <p class="time"><?= $post['create_time'] ?></p>
+                <p class="author"><?= $post['name'] ?></p>
+              </div>
+              <p class="message"><?= $post['message'] ?></p>
+            </div>
+          <?php endforeach ?>
+        <?php endif ?>
+
+      </div>
+    </div>
+  </section>
+
+
+</body>
+
+</html>
